@@ -3,8 +3,538 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StikJIT - Enable JIT on iOS 17.4+</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css>
-  <div>
-       this page is under something
-                                     <div>
+    <meta name="description" content="An on-device JIT enabler for iOS versions 17,4+ (17,4-18,5b3 (latest)), excluding iOS 18,4 beta 1 (22E5200), powered by idevice (This website is NOT affiliated with the actual StilJIT team at all)">
+    <meta name="keywords" content="StikJIT,JIT,Just-In-Time,iOS,17,17.4,18,18.4,18.5,beta,ipa,download,on-device,enabler,installer,IpadOS">
+    <meta name="author" content="StikJIT">
+    <meta property="og:title" content="StikJIT - on-device JIT enabler for iOS 17,4+">
+    <meta property="og:description" content="An on-device JIT enabler for iOS versions 17,4+ (17,4-18,5 beta 3 (latest), excluding iOS 18,4 beta 1 (22E5200), powered by idevice (this website is NOT affiliated with the actual StikJIT team at all)">
+    <meta property="og:image" content="https://stikjit.github.io/website/image/HomeScreen.png">
+    <meta property="og:url" content="https://stikjit.github.io/website">
+    <title>StikJIT - on-device JIT enabler for iOS 17,4+</title>
+    <link rel="icon" href="image/StikJIT.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cursor-glow"></div>
+
+    <header>
+    <a href="#" class="logo">
+        <div class="logo-icon">
+            <img id="logo-image" src="https://stikjit.github.io/website/image/StikJIT.png" alt="StikJIT Logo">
+        </div>
+        StikJIT
+    </a>
+
+        <div style="display: flex; align-items: center;">
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#download">Download</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="status-badge success">
+                <i class="fas fa-check-circle"></i>
+                Compatible with iOS 17,4 to 18,5 beta 3 (excluding 18,4 beta 1)
+            </div>
+            <h1>Enable <span class="highlight">JIT</span> on your iOS devices</h1>
+            <p>StikJIT is a powerful utility that allows you to enable Just-In-Time compilation for apps on your iOS device, unlocking full performance for emulators, Apps, and other stuff that benefit from JIT</p>
+            <div>
+                <a href="#download" class="btn">
+                    <i class="fas fa-download"></i> Download Now
+                </a>
+                <a href="#how-it-works" class="btn outline">Learn How It Works</a>
+            </div>
+            <div class="device-support">
+                <div class="device-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>iPhone</span>
+                </div>
+                <div class="device-icon">
+                    <i class="fas fa-tablet-alt"></i>
+                    <span>iPad</span>
+                </div>
+            </div>
+        </div>
+        <img src="https://stikjit.github.io/website/image/HomeScreen.png" alt="StikJIT App Interface" class="hero-image">
+    </section>
+
+    <section class="features" id="features">
+        <h2>Powerful <span class="highlight">Features</span></h2>
+        <p>StikJIT comes packed with everything you need to enable JIT on your iOS device</p>
+
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>One-Tap JIT Enabling</h3>
+                <p>Enable JIT for any installed app with just a single tap, without complex configurations or technical steps</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>iOS 17,4+ Support</h3>
+                <p>Fully compatible with iOS versions 17,4 through 18,5 beta 3 (excluding 18,4 beta 1), ensuring you can enable JIT on the latest iOS versions</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Custom Themes</h3>
+                <p>Personalize your experience with light and dark modes, plus custom accent colors to match your style</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h3>Pairing File Management</h3>
+                <p>Easily import and manage device pairing files for secure connections between your computer and iOS device</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-terminal"></i>
+                </div>
+                <h3>Detailed Logging</h3>
+                <p>Access comprehensive system logs to monitor the JIT enabling process and troubleshoot any issues that may come</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>No Jailbreak Required</h3>
+                <p>Works on standard iOS installations by leveraging developer features without requiring a jailbroken device</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+        <h2>How <span class="highlight">StikJIT</span> Works</h2>
+        <p>StikJIT simplifies the process of enabling JIT on iOS devices through a few easy steps</p>
+
+        <div style="background-color: var(--primary-light); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+            <h3><i class="fas fa-exclamation-circle"></i> Important Requirement</h3>
+            <p style="margin-bottom: 0;">StosVPN is required for StikJIT to function, This allows your device to connect to itself and enable the JIT capabilities, You can download StosVPN from the <a href="https://apps.apple.com/us/app/stosvpn/id6744003051" style="color: var(--primary); font-weight: 600;">App Store</a> or through <a href="https://testflight.apple.com/join/hBUbg4ZJ" style="color: var(--primary); font-weight: 600;">Testflight</a></p>
+        </div>
+
+        <div id="pairing-instructions" style="background-color: var(--card-bg); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid var(--border-color);">
+            <h3><i class="fas fa-file-alt"></i> Pairing File Instructions</h3>
+
+            <p>StikJIT requires a pairing file to function properly, Follow these instructions to generate one:</p>
+
+            <div class="platform-section" style="margin-top: 1.5rem;">
+                <h4>For Windows</h4>
+                <ol style="margin-left: 1.5rem;">
+                    <li><strong>Download</strong> <a href="https://github.com/osy/Jitterbug/releases/download/v1.3.1/jitterbugpair-win64.zip">Jitterbugpair-win64.zip</a> and extract it</li>
+                    <li><strong>Set a passcode</strong> for your device if you haven't already, Unlock your device, connect it to your computer via cable, If a prompt appears: tap "Trust"</li>
+                    <li>Open your device to the homescreen,</li>
+                    <li>In File Explorer, locate <code>jitterbugpair.exe</code> and run it by double-clicking or right-clicking and selecting "Open",</li>
+                    <li>JitterbugPair will generate a <strong>pairing file</strong> in the same folder, This file will have the extension <code>.mobiledevicepairing</code>,</li>
+                    <li><strong>Transfer the pairing file</strong> to your iOS device using One/iCloud/Google Drive, email, or any other method, For best results, compress the file into a .zip first</li>
+                </ol>
+            </div>
+
+            <div class="platform-section" style="margin-top: 1.5rem;">
+                <h4>For macOS</h4>
+                <ol style="margin-left: 1.5rem;">
+                    <li><strong>Download</strong> <a href="https://github.com/osy/Jitterbug/releases/download/v1.3.1/jitterbugpair-macos.zip">Jitterbugpair-macos.zip</a> and extract it,</li>
+                    <li><strong>Set a passcode</strong> for your device if you haven't already, Unlock your device, connect it to your computer via cable, If a prompt appears: tap "Trust"</li>
+                    <li>Open your device to the homescreen</li>
+                    <li>Find the extracted <code>jitterbugpair</code> file (it should have a black and green icon)</li>
+                    <li>Open Terminal (in Launchpad, it's in the "Utilities" folder),</li>
+                    <li>Drag the <code>jitterbugpair</code> file into Terminal and press "Return" or Enter</li>
+                    <li>If you get "macOS cannot verify that this app is free from malware":
+                        <ul>
+                            <li>Go to System Settings > Privacy & Security</li>
+                            <li>Scroll down to the message about the app</li>
+                            <li>Click "Open Anyway"</li>
+                            <li>Try running the program again</li>
+                        </ul>
+                    </li>
+                    <li>JitterBugPair will generate a <strong>pairing file</strong> with the extension <code>.mobiledevicepairing</code>,</li>
+                    <li><strong>Transfer the pairing file</strong> to your iOS device using AirDrop, iCloud/One/Google Drive, Email, or any other method, For best results, compress the file into a .zip first</li>
+                </ol>
+            </div>
+
+            <div class="platform-section" style="margin-top: 1.5rem;">
+                <h4>For Linux</h4>
+                <ol style="margin-left: 1.5rem;">
+                    <li><strong>Download</strong> <a href="https://github.com/osy/Jitterbug/releases/download/v1.3.1/jitterbugpair-linux.zip">Jitterbugpair-linux.zip</a> and extract it,</li>
+                    <li>Open a terminal in the extracted directory,</li>
+                    <li>Make the program executable:
+                        <pre style="background-color: 
+#131722; padding: 0.5rem; border-radius: 6px; margin: 0.5rem 0;">chmod +x ./jitterbugpair</pre>
+                    </li>
+                    <li><strong>Set a passcode</strong> for your device if you haven't already, Unlock your device, connect it to your computer via cable, If a prompt appears: tap "Trust"</li>
+                    <li>Open your device to the homescreen</li>
+                    <li>Execute the program:
+                        <pre style="background-color: 
+#131722; padding: 0.5rem; border-radius: 6px; margin: 0.5rem 0;">./jitterbugpair</pre>
+                    </li>
+                    <li>JitterBugPair will generate a <strong>pairing file</strong> with the extension <code>.mobiledevicepairing</code></li>
+                    <li><strong>Transfer the pairing file</strong> to your iOS device using your preferred method, For best results, compress the file into a .zip first</li>
+                </ol>
+            </div>
+
+            <div class="platform-section" style="margin-top: 1.5rem;">
+                <h4>On your iOS device</h4>
+                <ol style="margin-left: 1.5rem;">
+                    <li>In the <strong>Files app</strong>, long-press your zipped pairing file and select <strong>Uncompress</strong></li>
+                    <li>Launch the <strong>StikJIT</strong> app</li>
+                    <li>Upon launching the app, tap <strong>Import Pairing File</strong>, then navigate to and select your <strong>unzipped pairing file</strong></li>
+                </ol>
+            </div>
+
+            <div style="background-color: rgba(16, 185, 129, 0.1); border-left: 4px solid 
+#10b981; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.5rem 0;">
+                <p style="margin: 0;"><strong>Tip:</strong> When using cloud storage, the file format might change (usually to .txt), It is always recommended to zip your pairing file before transferring it, StikJIT only accepts <code>.mobiledevicepairing</code> or <code>.plist</code> files</p>
+            </div>
+        </div>
+
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Install StosVPN</h3>
+                    <p>Download and install the StosVPN app from the App Store or Testflight, which is required for StikJIT to establish the necessary connections</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Generate & Import Pairing File</h3>
+                    <p>Generate a pairing file using Jitterbug and import it into StikJIT, Download Jitterbug for your platform:</p>
+                    <div class="download-platforms" style="display: flex; margin-top: 1rem; gap: 10px;">
+                        <a href="https://github.com/osy/Jitterbug/releases/download/v1.3.1/jitterbugpair-win64.zip" class="button" style="margin-top: 0;">
+                            <i class="fab fa-windows"></i> Windows
+                        </a>
+                        <a href="https://github.com/osy/Jitterbug/releases/download/v1.3.1/jitterbugpair-macos.zip" class="button" style="margin-top: 0;">
+                            <i class="fab fa-apple"></i> macOS
+                        </a>
+                        <a href="https://github.com/osy/Jitterbug/releases/download/v1.3.1/jitterbugpair-linux.zip" class="button" style="margin-top: 0;">
+                            <i class="fab fa-linux"></i> Linux
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Select Target App</h3>
+                    <p>Browse your installed apps and select the one you want to enable JIT for from an easy-to-use list,</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Enable JIT</h3>
+                    <p>Tap the "Enable JIT" button, and StikJIT handles all the technical details to enable JIT compilation for your selected app,</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 4rem;">
+            <h3>Technical Stack</h3>
+            <p>StikJIT is built using cool technologies to provide a seamless and very reliable experience</p>
+
+            <div class="tech-stack">
+                <span class="tech-badge">Swift</span>
+                <span class="tech-badge">SwiftUI</span>
+                <span class="tech-badge">idevice</span>
+                <span class="tech-badge">em_proxy</span>
+                <span class="tech-badge">iOS 17,4+</span>
+                <span class="tech-badge">Developer Disk Images</span>
+                <span class="tech-badge">JIT</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="download">
+        <h2>Download <span class="highlight">StikJIT</span></h2>
+        <p>Get StikJIT and unlock the full potential of your iOS apps with JIT</p>
+        
+        <div class="download-buttons">
+            <a href="https://testflight.apple.com/join/8rHFcgzC" class="download-button">
+                <img src="https://stikjit.github.io/website/image/testflight.svg" alt="Testflight Logo"></i>
+                <span>StikDebug (Testflight)</span>
+            </a>
+       
+        <div class="download-buttons">
+            <a href="https://tinyurl.com/AltstorePALStikJIT" class="download-button">
+                <i class="fab fa-apple"></i>
+                <span>AltStore PAL (EU)</span>
+            </a>
+
+            <a href="https://tinyurl.com/AltstoreStikJIT" class="download-button">
+                <i class="fas fa-store"></i>
+                <span>Add to AltStore</span>
+            </a>
+
+            <a href="https://github.com/StephenDev0/StikJIT/releases/latest" class="download-button">
+                <i class="fas fa-file-download"></i>
+                <span>Download IPA</span>
+            </a>
+
+            <a href="https://raw.githubusercontent.com/StephenDev0/StikJIT/main/repo.json" class="download-button">
+                <i class="fas fa-code-branch"></i>
+                <span>Source Repo</span>
+            </a>
+        </div>
+
+        <div class="building-section">
+            <h3>Building From Source</h3>
+            <p>For developers who want to build StikJIT from source, follow these steps:</p>
+
+            <div class="code-block">
+                <code>
+# Clone the repository
+git clone https://github.com/0-Blu/StikJIT.git
+cd StikJIT
+
+# Build using Makefile
+make package  # Build unsigned .ipa
+                </code>
+            </div>
+
+            <h3>Updating</h3>
+            <div class="code-block">
+                <code>
+git pull
+make clean  # Clean previous build
+make package  # Rebuild
+                </code>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <h3>Contributing to StikJIT</h3>
+                <p>StikJIT welcomes contributions from the community, Here's how to get started:</p>
+
+                <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--text-light);">
+                    <li>Fork the repository on GitHub</li>
+                    <li>Clone your fork and create a new branch</li>
+                    <li>Make your changes and test thoroughly</li>
+                    <li>Submit a pull request with a clear description of your changes</li>
+                </ol>
+
+                <a href="https://github.com/StephenDev0/StikJIT" class="btn outline">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2>the <span class="highlight">StikJIT Team</span></h2>
+        <p>StikJIT is developed by a dedicated team of contributors interested in iOS development</p>
+
+        <div class="team">
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="https://stikjit.github.io/website/image/StephenDev0.png" alt="Stephen">
+                    </div>
+                    <h3>Stephen</h3>
+                    <div class="team-role">App Creator</div>
+                    <div class="social-links">
+                        <a href="https://github.com/StephenDev0" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="https://stikjit.github.io/website/image/jkcoxson.png" alt="jkcoxson">
+                    </div>
+                    <h3>jkcoxson</h3>
+                    <div class="team-role">idevice & em_proxy</div>
+                    <div class="social-links">
+                        <a href="https://jkcoxson.com/" class="social-link">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                        <a href="https://github.com/jkcoxson" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="https://stikjit.github.io/website/image/Stossy11.png" alt="Stossy11">
+                    </div>
+                    <h3>Stossy11</h3>
+                    <div class="team-role">Developer</div>
+                    <div class="social-links">
+                        <a href="https://github.com/Stossy11" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="https://stikjit.github.io/website/image/neoarz.png" alt="Neo">
+                    </div>
+                    <h3>Neo</h3>
+                    <div class="team-role">Developer</div>
+                    <div class="social-links">
+                        <a href="https://neoarz.xyz/" class="social-link">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                        <a href="https://github.com/neoarz" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p>And other contributors including Se2crid, Huge_Black, and Wynwxst</p>
+                <a href="https://github.com/StephenDev0/StikJIT/graphs/contributors" class="btn outline">
+                    <i class="fas fa-users"></i> View All Contributors
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>Frequently Asked <span class="highlight">Questions</span></h2>
+        <p>Got questions about StikJIT? Find answers below</p>
+
+        <div class="faq">
+            <div class="faq-item">
+                <div class="faq-question">
+                    What is JIT compilation and why do I need it?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>JIT (Just-In-Time) compilation converts code at runtime rather than before execution, significantly improving performance for emulators, and other apps that generate code on-the-fly, iOS restricts JIT by default for security reasons, but StikJIT safely enables this feature for specific apps to boost their performance and capabilities</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I generate a pairing file?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>You can generate a pairing file using Jitterbug, Download the appropriate version for your operating system:</p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                        <li><a href="https://github.com/osy/Jitterbug/releases/download/v1.3.1/jitterbugpair-win64.zip">Windows</a></li>
+                        <li><a href="https://github.com/osy/Jitterbug/releases/download/v1.3.1/jitterbugpair-macos.zip">macOS</a></li>
+                        <li><a href="https://github.com/osy/Jitterbug/releases/download/v1.3.1/jitterbugpair-linux.zip">Linux</a></li>
+                    </ul>
+                    <p>For detailed instructions on generating and using the pairing file, see our <a href="#pairing-instructions">pairing file instructions</a> in the How It Works section,</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What iOS versions are supported?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>StikJIT supports iOS 17,4 through 18,5 beta 3, excluding iOS 18,4 beta 1 (22E5200), The app utilizes specific features introduced in iOS 17,4 to enable JIT compilation capabilities</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Why do I need StosVPN?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>StosVPN creates a loopback connection that allows your device to connect to itself, This is necessary for StikJIT to establish the required communication channels needed to enable JIT, You can download StosVPN from the App Store or From Testflight</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Where do I get a pairing file?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Pairing files (,mobiledevicepairing) are typically generated when you pair your iOS device with a computer running Xcode or other development tools, You'll need to export this pairing file from your computer to use with StikJIT, Detailed instructions are available in the GitHub repository</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Is jailbreaking required?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>No, StikJIT does not require a jailbroken device, It works on standard iOS installations by leveraging developer features in a secure way</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Will enabling JIT affect my device's security?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>StikJIT enables JIT only for the specific apps you select, not system-wide, This targeted approach maintains iOS security while providing performance benefits where needed, The app uses secure methods to connect to your device through validated pairing files</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What should I do if JIT enabling fails?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>If JIT enabling fails, first check that your pairing file is valid and that the Developer Disk Image mounted successfully, You can view detailed logs in the app's Console Logs section to diagnose specific issues, Make sure your iOS device is connected to Wi-Fi and that you're using the <a href="https://github.com/StephenDev0/StikJIT/releases/latest" style="color: var(--primary); font-weight: 600;">latest version of StikJIT</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta">
+        <h2>Ready to <span class="highlight">JIT</span> Your Apps?</h2>
+        <p>Get StikJIT today and unlock the full potential of your iOS apps with JIT</p>
+        <a href="#download" class="btn">
+            <i class="fas fa-download"></i> Download Now
+        </a>
+        <div class="license-badge">
+            <i class="fas fa-file-contract"></i> Licensed under The <a href="https://github.com/StephenDev0/StikJIT/blob/main/LICENSE" style="color: var(--primary); font-weight: 600;">GNU Affero General Public License v3,0</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://github.com/StephenDev0/StikJIT/">GitHub</a>
+            <a href="https://github.com/StephenDev0/StikJIT/issues">Report Issues</a>
+            <a href="https://discord.gg/ZnNcrRT3M8">Discord Community</a>
+            <a href="https://www.icloud.com/shortcuts/1e1b522ea1e045ebb0921d31870d8cb4">iOS Shortcut</a>
+            <a href="https://apps.apple.com/us/app/stosvpn/id6744003051">StosVPN</a>
+        </div>
+        <p>© 2025 StikJIT Team, All rights to them</p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--text-light);">
+            This website is NOT affiliated with the actual StikJIT in any way
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
