@@ -227,19 +227,7 @@ p {
     z-index: 1;
     border-radius: 16px;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-    animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(-50%);
-    }
-    50% {
-        transform: translateY(-45%);
-    }
-    100% {
-        transform: translateY(-50%);
-    }
+    animation: none !important;
 }
 
 .features {
