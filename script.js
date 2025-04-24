@@ -1,3 +1,17 @@
+function updateLogoForTheme() {
+    const logoImage = document.getElementById('logo-image');
+    if (!logoImage) return;
+    
+    const isDarkTheme = document.body.hasAttribute('data-theme') && 
+                        document.body.getAttribute('data-theme') === 'dark';
+    
+    if (isDarkTheme) {
+        logoImage.src = 'https://stikjit.github.io/website/image/StikJIT_Dark.png';
+    } else {
+        logoImage.src = 'https://stikjit.github.io/website/image/StikJIT.png';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
@@ -10,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
         themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
     }
     
+    updateLogoForTheme();
+    
     themeToggle.addEventListener('click', () => {
         if (document.body.getAttribute('data-theme') === 'dark') {
             document.body.removeAttribute('data-theme');
@@ -18,7 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.setAttribute('data-theme', 'dark');
             themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
+        setTimeout(updateLogoForTheme, 10);
     });
+
+    prefersDarkScheme.addEventListener('change', updateLogoForTheme);
 
     const faqQuestions = document.querySelectorAll('.faq-question');
     
@@ -112,4 +131,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-}); //p
+});//p
