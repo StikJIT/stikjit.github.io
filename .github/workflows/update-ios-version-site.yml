@@ -166,29 +166,29 @@ jobs:
           
           # Update meta description
           content = re.sub(
-              r'meta name="description" content="An on-device JIT enabler for iOS versions 17,4\+ \(17,4-[^)]+\)',
-              f'meta name="description" content="An on-device JIT enabler for iOS versions 17,4+ (17,4-{display_version} (latest))',
+              r'meta name="description" content="An on-device JIT enabler for iOS versions 17.4\+ \(17.4-[^)]+\)',
+              f'meta name="description" content="An on-device JIT enabler for iOS versions 17.4+ (17.4-{display_version} (latest))',
               content
           )
           
           # Update the og description
           content = re.sub(
-              r'meta property="og:description" content="An on-device JIT enabler for iOS versions 17,4\+ \(17,4-[^)]+\)',
-              f'meta property="og:description" content="An on-device JIT enabler for iOS versions 17,4+ (17,4-{display_version} (latest))',
+              r'meta property="og:description" content="An on-device JIT enabler for iOS versions 17.4\+ \(17.4-[^)]+\)',
+              f'meta property="og:description" content="An on-device JIT enabler for iOS versions 17.4+ (17.4-{display_version} (latest))',
               content
           )
           
           # Update the status badge
           content = re.sub(
-              r'<i class="fas fa-check-circle"></i>\s*Compatible with iOS 17,4 to [^<]+',
-              f'<i class="fas fa-check-circle"></i>\\n                Compatible with iOS 17,4 to {display_version} (excluding 18,4 beta 1)',
+              r'<i class="fas fa-check-circle"></i>\s*Compatible with iOS 17.4 to [^<]+',
+              f'<i class="fas fa-check-circle"></i>\\n                Compatible with iOS 17.4 to {display_version} (excluding 18.4 beta 1)',
               content
           )
           
           # Update the feature card iOS support section
           content = re.sub(
-              r'<p>Fully compatible with iOS versions 17,4 through [^<]+</p>',
-              f'<p>Fully compatible with iOS versions 17,4 through {display_version} (excluding 18,4 beta 1), ensuring you can enable JIT on the latest iOS versions</p>',
+              r'<p>Fully compatible with iOS versions 17.4 through [^<]+</p>',
+              f'<p>Fully compatible with iOS versions 17.4 through {display_version} (excluding 18.4 beta 1), ensuring you can enable JIT on the latest iOS versions</p>',
               content
           )
           
@@ -204,7 +204,7 @@ jobs:
               # Write the updated content back to the index.html
               with open('index.html', 'w', encoding='utf-8') as file:
                   file.write(content)
-              print("Updated iOS version in website")
+              print("Update iOS version range in website [skip ci]")
               print("::set-output name=changes::true")
           else:
               print("No changes needed to website")
