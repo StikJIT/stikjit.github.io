@@ -207,27 +207,30 @@ p {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     position: relative;
     overflow: hidden;
+    padding: 6rem 2rem 2rem;
 }
 
 .hero-content {
     max-width: 600px;
+    text-align: center;
     position: relative;
     z-index: 2;
 }
 
 .hero-image {
-    position: absolute;
-    right: -5%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 55%;
-    z-index: 1;
+    position: relative;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 70vh;
+    margin-top: 2rem;
     border-radius: 16px;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-    animation: none !important;
+    z-index: 1;
 }
 
 .features {
@@ -620,8 +623,7 @@ footer {
 
 @media (max-width: 1024px) {
     .hero-image {
-        width: 50%;
-        right: 0;
+        max-width: 90%;
     }
 }
 
@@ -643,12 +645,8 @@ footer {
     }
 
     .hero-image {
-        position: relative;
         width: 90%;
         margin: 3rem auto 0;
-        right: auto;
-        top: auto;
-        transform: none;
     }
 
     h1 {
