@@ -164,17 +164,17 @@ jobs:
           # Store original content to check for changes
           original_content = content
           
-          # Update meta description
+          # FIXED: Update meta description with improved regex
           content = re.sub(
-              r'meta name="description" content="An on-device JIT enabler for iOS versions 17.4\+ \(17.4-[^)]+\)',
-              f'meta name="description" content="An on-device JIT enabler for iOS versions 17.4+ (17.4-{display_version} (latest))',
+              r'(meta name="description" content="An on-device JIT enabler for iOS versions 17.4\+ \()17.4-[^,]+?(, excluding)',
+              f'\\117.4-{display_version} (latest)\\2',
               content
           )
           
-          # Update the og description
+          # FIXED: Update the og description with improved regex
           content = re.sub(
-              r'meta property="og:description" content="An on-device JIT enabler for iOS versions 17.4\+ \(17.4-[^)]+\)',
-              f'meta property="og:description" content="An on-device JIT enabler for iOS versions 17.4+ (17.4-{display_version} (latest))',
+              r'(meta property="og:description" content="An on-device JIT enabler for iOS versions 17.4\+ \()17.4-[^,]+?(, excluding)',
+              f'\\117.4-{display_version} (latest)\\2',
               content
           )
           
