@@ -164,19 +164,19 @@ jobs:
           # Store original content to check for changes
           original_content = content
           
-          # FIXED: Update meta description with improved regex
-          content = re.sub(
-              r'(meta name="description" content="An on-device JIT enabler for iOS versions 17.4\+ \()17.4-[^,]+?(, excluding)',
-              f'\\117.4-{display_version} (latest)\\2',
-              content
-          )
+          # First, clean up any existing mess in meta descriptions by fixing the structure
+          # This is a one-time fix for the current issue
+          meta_desc_pattern = r'<meta name="description" content="An on-device JIT enabler for iOS versions 17.4\+ \(17.4-[^,]*?(?:\([^)]*\)[^,]*?)?\)[^"]*'
+          meta_desc_match = re.search(meta_desc_pattern, content)
+          if meta_desc_match:
+              fixed_meta_desc = f'<meta name="description" content="An on-device JIT enabler for iOS versions 17.4+ (17.4-{display_version} (latest)), excluding iOS 18.4 beta 1 (22E5200)'
+              content = content.replace(meta_desc_match.group(0), fixed_meta_desc)
           
-          # FIXED: Update the og description with improved regex
-          content = re.sub(
-              r'(meta property="og:description" content="An on-device JIT enabler for iOS versions 17.4\+ \()17.4-[^,]+?(, excluding)',
-              f'\\117.4-{display_version} (latest)\\2',
-              content
-          )
+          og_desc_pattern = r'<meta property="og:description" content="An on-device JIT enabler for iOS versions 17.4\+ \(17.4-[^,]*?(?:\([^)]*\)[^,]*?)?\)[^"]*'
+          og_desc_match = re.search(og_desc_pattern, content)
+          if og_desc_match:
+              fixed_og_desc = f'<meta property="og:description" content="An on-device JIT enabler for iOS versions 17.4+ (17.4-{display_version} (latest)), excluding iOS 18.4 beta 1 (22E5200)'
+              content = content.replace(og_desc_match.group(0), fixed_og_desc)
           
           # Update the status badge
           content = re.sub(
